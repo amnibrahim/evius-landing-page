@@ -1,0 +1,60 @@
+div#hero{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+div#nav{
+	width: calc(100% - 100px);
+	height: 36px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+div.menu img{
+	width: 36px;
+	height: 36px;
+}
+
+div.menu:nth-child(even){
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+div#title{
+	width: calc(100% - 400px);
+	position: absolute;
+	bottom: calc(100vh / 4);
+}
+
+span#aphos{
+	font-size: 15rem;	
+	position: absolute;
+	left: -60px;
+	top: -60px;
+	letter-spacing: -10px;
+}
+
+h1#titleText{
+	margin-bottom: 24px;
+	letter-spacing: 1.5px;
+	line-height: 80px;
+	position: relative;
+}
+
+p#bodyText{
+	width: 400px;
+	margin-bottom: 48px;
+}
+
+p#cornerText{
+	position: absolute;
+	right: 0;
+	bottom: -0.75rem;
+	text-align: right;
+	line-height: 19px;
+}
