@@ -58,3 +58,10 @@ p#cornerText{
 	text-align: right;
 	line-height: 19px;
 }
+
+div#arrow{
+	position: absolute;
+	transform: rotate(90deg) translate(-100%, 300%) scale(0.5);
+	left: 50%;
+	bottom: -200px;
+}
