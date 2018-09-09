@@ -14,8 +14,8 @@ div#nav{
 }
 
 div.menu img{
-	width: 36px;
-	height: 36px;
+	width: 24px;
+	height: 24px;
 }
 
 div.menu:nth-child(even){
