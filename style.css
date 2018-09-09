@@ -25,13 +25,13 @@ div.menu:nth-child(even){
 	align-items: center;
 }
 
-div#title{
+div#heroTitle{
 	width: calc(100% - 400px);
 	position: absolute;
 	bottom: calc(100vh / 4);
 }
 
-span#aphos{
+span#heroAphos{
 	font-size: 15rem;	
 	position: absolute;
 	left: -60px;
@@ -39,19 +39,19 @@ span#aphos{
 	letter-spacing: -10px;
 }
 
-h1#titleText{
-	margin-bottom: 24px;
+h1#heroTitleText{
+	margin-bottom: 1.5rem;
 	letter-spacing: 1.5px;
 	line-height: 80px;
 	position: relative;
 }
 
-p#bodyText{
+p#heroBodyText{
 	width: 400px;
-	margin-bottom: 48px;
+	margin-bottom: 4rem;
 }
 
-p#cornerText{
+p#heroCornerText{
 	position: absolute;
 	right: 0;
 	bottom: -0.75rem;
@@ -59,9 +59,72 @@ p#cornerText{
 	line-height: 19px;
 }
 
-div#arrow{
+div#heroArrow{
 	position: absolute;
 	transform: rotate(90deg) translate(-100%, 300%) scale(0.5);
 	left: 50%;
 	bottom: -200px;
+}
+
+/*-----------------------*/
+
+div#service{
+	padding: 150px 200px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+div#title{
+	text-align: center;
+	margin-bottom: 1.5rem;
+	flex: 0 0 100%;
+}
+
+div.separatorWrapper{
+	height: 3px;
+	display: flex;
+	justify-content: center;
+	flex: 0 0 100%;
+	margin-bottom: 100px;
+}
+
+div.separator{
+	width: 100px;
+}
+
+/*fallback svg
+#grid1{
+  width: 200px;
+  height: 164px;
+  background-image: url(kiwi.png);
+}*/
+
+div#serviceGrid{
+	padding: 0 150px;
+}
+
+div.gridCell{
+	display: grid;
+	grid: auto-flow dense / repeat(2, 50%);
+	place-items: center;
+	margin-bottom: 100px;
+}
+
+div#serviceGrid p span{
+	line-height: 2rem;
+	display: block;
+	margin-bottom: 0.75rem;
+}
+
+div#serviceGrid p{
+	padding: 0 2rem;
+}
+
+div#serviceGrid div:nth-child(odd) p{
+	text-align: right;
+	padding: 0 1.75rem;
+}
+
+object{
+	width: 80%;
 }
