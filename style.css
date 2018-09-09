@@ -69,12 +69,12 @@ div#heroArrow{
 /*-----------------------*/
 
 div#service{
-	padding: 150px 200px;
+	padding: 150px 200px 75px;
 	display: flex;
 	flex-wrap: wrap;
 }
 
-div#title{
+div.title{
 	text-align: center;
 	margin-bottom: 1.5rem;
 	flex: 0 0 100%;
@@ -91,13 +91,6 @@ div.separatorWrapper{
 div.separator{
 	width: 100px;
 }
-
-/*fallback svg
-#grid1{
-  width: 200px;
-  height: 164px;
-  background-image: url(kiwi.png);
-}*/
 
 div#serviceGrid{
 	padding: 0 150px;
@@ -127,4 +120,93 @@ div#serviceGrid div:nth-child(odd) p{
 
 object{
 	width: 80%;
+}
+
+/*fallback svg
+object#grid1{
+  width: 200px;
+  height: 164px;
+  background-image: url(kiwi.png);
+}*/
+
+/*-----------------------*/
+
+div#solution{
+	padding: 75px 200px 150px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+div#solution div.separatorWrapper{
+	margin-bottom: 50px;
+}
+
+div#solutionGrid{
+	display: grid;
+	grid: auto-flow dense / repeat(3, 33.333%);
+	place-items: center;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+div#solutionGrid p{
+	margin-bottom: 1.5rem;
+}
+
+div.gridSolCell{
+	padding: 1.5rem;
+}
+
+div.gridSolCell img{
+	width: 100%;
+}
+
+div#demo{
+	flex: 0 0 100%;
+	display: flex;
+	justify-content: center;
+}
+
+div#demoWrapper input{
+	padding: 0.6rem 1.25rem 0.6rem 1.25rem;
+	width: 400px;
+	margin-right: 1rem;
+}
+
+div#demoWrapper button{
+	cursor: pointer;
+}
+
+/*-----------------------*/
+
+div#work{
+	padding: 0px 200px 0px;
+	height: 100vh;
+	display: grid;
+	grid: auto-flow dense / repeat(2, 50%);
+	place-items: center;
+	/*margin-bottom: 50px;*/
+}
+
+div#workTitle{
+	width: 100%;
+}
+
+div#workTitle div.title{
+	margin-bottom: 4rem;
+}
+
+div#workTitle div.separatorWrapper{
+	margin: 0;
+}
+
+div#workTitle div{
+	text-align: left;
+	justify-content: flex-start;
+}
+
+div#workTitle span{
+	line-height: 4rem;
+	display: block;
+	margin-bottom: 2rem;
 }
