@@ -111,6 +111,7 @@ div#serviceGrid p span{
 
 div#serviceGrid p{
 	padding: 0 2rem;
+	max-width: 350px;
 }
 
 div#serviceGrid div:nth-child(odd) p{
@@ -173,7 +174,7 @@ div#demoWrapper input{
 	margin-right: 1rem;
 }
 
-div#demoWrapper button{
+div#demoWrapper a{
 	cursor: pointer;
 }
 
@@ -209,4 +210,99 @@ div#workTitle span{
 	line-height: 4rem;
 	display: block;
 	margin-bottom: 2rem;
+}
+
+div#slider{
+	box-shadow: 0px 0px 25px -5px;
+	border-radius: 10px;
+}
+
+div#slider img{
+	width: 100%;
+}
+
+div#pointer{
+	display: flex;
+	justify-content: center;
+	margin-top: 1.5rem;
+}
+
+div#pointer div{
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #C4C4C4;
+	cursor: pointer;
+}
+
+div#pointer div:nth-child(2){
+	margin: 0 10px;
+}
+
+/*-----------------------*/
+
+div#blog{
+	padding: 150px 200px 75px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+div#blog p{
+	text-align: left;
+}
+
+div#blog div.separatorWrapper{
+	justify-content: flex-start;
+}
+
+div#postWrapper{
+	width: 100%;
+}
+
+div.post{
+	height: 200px;
+	margin-bottom: 2rem;
+}
+
+div.thumbnail{
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+
+div.description{
+	width: 75%;
+	height: 100%;
+	float: left;
+	padding: 0 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 1px 1px 5px -2px;
+}
+
+div.titleWrap{
+	width: 100%;
+}
+
+div.description p:first-child{
+	margin-bottom: 1rem;
+}
+
+/*-----------------------*/
+
+div#contact{
+	height: 100vh;
+	display: grid;
+	grid: auto-flow dense / repeat(2, 50%);
+	place-items: center;
+}
+
+
+div#contactus{
+	background: #14296C;
+}
+
+div#careers{
+	background: #1C3997;
 }
