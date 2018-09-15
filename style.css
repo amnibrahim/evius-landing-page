@@ -74,20 +74,6 @@ div#service{
 	flex-wrap: wrap;
 }
 
-div.title{
-	text-align: center;
-	margin-bottom: 1.5rem;
-	flex: 0 0 100%;
-}
-
-div.separatorWrapper{
-	height: 3px;
-	display: flex;
-	justify-content: center;
-	flex: 0 0 100%;
-	margin-bottom: 100px;
-}
-
 div.separator{
 	width: 100px;
 }
@@ -292,17 +278,61 @@ div.description p:first-child{
 /*-----------------------*/
 
 div#contact{
-	height: 100vh;
-	display: grid;
-	grid: auto-flow dense / repeat(2, 50%);
-	place-items: center;
-}
 
+}
 
 div#contactus{
 	background: #14296C;
 }
-
 div#careers{
 	background: #1C3997;
+}
+
+div#contactus, div#careers{
+	width: 50%;
+	height: 100%;
+	float: left;
+	display: flex;
+	padding: 100px 0;
+	align-items: center;
+	justify-content: center;
+}
+
+div#contact div.contactGrid{
+	width: 350px;
+	height: 250px;
+}
+
+div#contact div p:first-child{
+	letter-spacing: 2px;
+}
+
+p#contactBody{
+	margin: 2rem 0 3rem;
+}
+
+p#careersBody{
+	margin: 2rem 0;
+}
+
+div#careers div.separatorWrapper{
+	margin: 2rem 0 0;
+	justify-content: flex-start;
+}
+
+/*-----------------------*/
+
+div#footer{
+}
+
+div#footerWrapper{
+	padding: 50px 200px;
+	display: flex;
+	justify-content: space-between;
+}
+
+div#socialIcon img{
+	width: 24px;
+	height: 24px;
+	margin-left: 12px;: 
 }
