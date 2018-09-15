@@ -39,7 +39,7 @@ span#heroAphos{
 	letter-spacing: -10px;
 }
 
-h1#heroTitleText{
+p#heroTitleText{
 	margin-bottom: 1.5rem;
 	letter-spacing: 1.5px;
 	line-height: 80px;
@@ -74,11 +74,8 @@ div#service{
 	flex-wrap: wrap;
 }
 
-div.separator{
-	width: 100px;
-}
-
 div#serviceGrid{
+	width: 100%;
 	padding: 0 150px;
 }
 
@@ -180,7 +177,7 @@ div#workTitle{
 }
 
 div#workTitle div.title{
-	margin-bottom: 4rem;
+	margin-bottom: 3rem;
 }
 
 div#workTitle div.separatorWrapper{
@@ -196,6 +193,7 @@ div#workTitle span{
 	line-height: 4rem;
 	display: block;
 	margin-bottom: 2rem;
+	letter-spacing: 5px;
 }
 
 div#slider{
@@ -254,6 +252,12 @@ div.thumbnail{
 	width: 25%;
 	height: 100%;
 	float: left;
+	overflow: hidden;
+}
+
+div.thumbnail img{
+	/*width: 100%;*/
+	height: 100%;
 }
 
 div.description{

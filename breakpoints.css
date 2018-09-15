@@ -1,0 +1,115 @@
+/* large desktops and up ----------- */
+@media screen and (min-width: 1200px) {
+
+}
+
+/* tablets/desktops and up ----------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+	div#hero{
+		height: 66vh;
+	}
+
+	div#heroTitle{
+		width: calc(100% - 300px);
+		bottom: calc(100vh / 4);
+	}
+
+	div#service{
+		padding: 75px 150px 75px;
+	}
+
+	div#serviceGrid{
+		padding: 0 0px;
+	}
+
+	div#solution{
+		padding: 75px 150px 150px;
+	}
+
+	div#work{
+		height: 50vh;
+		padding: 0px 150px 0px;
+	}
+
+	div#blog{
+		padding: 150px 150px 75px
+	}
+
+	div#footerWrapper{
+		padding: 50px 150px;
+	}
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+	div#hero{
+		height: 50vh;
+	}
+
+	div#heroTitle{
+		width: calc(100% - 200px);
+		bottom: calc(100vh /8);
+	}
+
+	div#heroTitle p#heroTitleText{
+	    font-size: 3.2rem;	
+	}
+
+	div#service{
+		padding: 75px 100px 75px;
+	}
+
+	div#serviceGrid{
+		padding: 0 0px;
+	}
+
+	div#solution{
+		padding: 75px 100px 150px;
+	}
+
+	div#solution div#demoWrapper input{
+		width: 250px;
+	}
+
+	div#work{
+		height: 50vh;
+		padding: 0px 100px 0px;
+	}
+
+	div#work div.title p{
+		font-size: 3.2rem;
+	}
+
+	div#blog{
+		padding: 150px 100px 75px
+	}
+
+	div#blog div.post{
+		height: 150px;
+	}
+
+	div#contact div.contactGrid{
+		width: 300px;
+	}
+
+	div#contact div.contactGrid div.separatorWrapper{
+		margin: 1.5rem 0 0;
+	}
+
+	div#contact div.contactGrid p#careersBody{
+		margin: 1.5rem 0;
+	}
+
+	div#footerWrapper{
+	    padding: 50px 100px
+	}
+
+}
+
+/* Extra small devices (phones, up to 480px) */
+@media screen and (max-width: 767px) {
+	
+}

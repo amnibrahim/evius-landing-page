@@ -43,9 +43,9 @@ for (x=0; x < elements.length; x++) {
 	})
 }
 
-var thumbnails = document.querySelectorAll('.thumbnail');
-for (x=0; x < elements.length; x++) {
-	thumbnails[x].style.backgroundImage = 'url("img/t.png")';
-	thumbnails[x].style.backgroundSize = 'cover';
-	console.log(thumbnails[x])
-}
+// var thumbnails = document.querySelectorAll('.thumbnail');
+// for (x=0; x < elements.length; x++) {
+// 	thumbnails[x].style.backgroundImage = 'url("img/t.png")';
+// 	thumbnails[x].style.backgroundSize = 'cover';
+// 	console.log(thumbnails[x])
+// }
