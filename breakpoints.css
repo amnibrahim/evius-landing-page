@@ -45,17 +45,22 @@
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
 
+	.button{
+		font-size: 12px;
+	}
+
 	div#hero{
 		height: 50vh;
 	}
 
 	div#heroTitle{
 		width: calc(100% - 200px);
-		bottom: calc(100vh /8);
+		bottom: calc(100vh /10);
 	}
 
 	div#heroTitle p#heroTitleText{
 	    font-size: 3.2rem;	
+	    line-height: 60px;
 	}
 
 	div#service{
@@ -67,7 +72,11 @@
 	}
 
 	div#solution{
-		padding: 75px 100px 150px;
+		padding: 0px 100px 150px;
+	}
+
+	div#solution div.gridSolCell{
+		padding: 1rem;
 	}
 
 	div#solution div#demoWrapper input{
@@ -85,6 +94,10 @@
 
 	div#blog{
 		padding: 150px 100px 75px
+	}
+
+	div#blog p{
+		font-size: 1.25rem;
 	}
 
 	div#blog div.post{
@@ -111,5 +124,207 @@
 
 /* Extra small devices (phones, up to 480px) */
 @media screen and (max-width: 767px) {
+
+	p{
+		font-size: 12px;
+	}
+
+	.button{
+		font-weight: 400;
+	}
+
+	.title{
+		margin-bottom: 1rem;
+	}
+
+	.separatorWrapper{
+		margin-bottom: 50px;
+	}
+
+	div#hero div#nav{
+		display: none;
+	}
 	
+	div#hero div#heroTitle{
+		width: calc(100% - 75px);
+		bottom: calc(100vh / 4);
+		text-align: center;
+	}
+
+	div#hero div#heroTitle span#heroAphos{
+		font-size: 11rem;
+		left: 15px;
+		top: -40px;
+	}
+
+	div#hero div#heroTitle p#heroTitleText{
+		font-size: 2.25rem;
+		line-height: 45px;
+	}
+
+	div#hero div#heroTitle p#heroBodyText{
+		width: auto;
+		margin-bottom: 3rem;
+	}
+
+	div#hero div#heroTitle p#heroCornerText{
+		display: none;
+	}
+
+	div#service{
+		padding: 50px;
+	}
+
+	div#service div#serviceGrid{
+		padding: 0;
+	}
+
+	div#service div#serviceGrid p span{
+		font-size: 1rem;
+		font-weight: 600;
+	}
+
+	div#service div#serviceGrid p span br{
+		display: none;
+	}
+
+	div#service div#serviceGrid div.gridCell{
+		margin-bottom: 32px;
+		grid: auto-flow dense / repeat(1, 100%);
+	}
+
+	div#service div#serviceGrid div.gridCell p{
+		padding: 0;
+		text-align: left;
+	}
+
+	div#service div#serviceGrid div.gridCell object{
+		display: none;
+	}
+
+	div#solution{
+		padding: 50px;
+	}
+
+	div#solution div#solutionGrid{
+		grid: auto-flow dense / repeat(1, 100%);
+		margin-bottom: 16px;
+	}
+
+	div#solution div.gridSolCell{ 
+		padding: 0;
+		margin-bottom: 32px;
+	}
+
+	div#solution sdiv#solutionGrid p{
+		margin-bottom: 0.75rem;
+	}
+
+	div#solution div#demoWrapper input, div#demoWrapper a{
+		width: 100%;
+		display: inline-block;
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+
+	div#work{
+		padding: 50px;
+		height: auto;
+		display: block;
+	}
+
+	div#work div#workTitle div.separatorWrapper{
+		justify-content: center;
+		margin-bottom: 50px;
+	}
+
+	div#work p{
+		text-align: center;
+		font-size: 2.25rem;
+		font-weight: 400;
+	}
+
+	div#work div#workTitle span{
+		line-height: 0;
+		margin-bottom: 0;
+		display: inline;
+		letter-spacing: 1px;
+	}
+
+	div#work div.title{
+		margin-bottom: 1rem;
+	}
+
+	div#work div#slider{
+		box-shadow: 0px 0px 25px -10px;
+	}
+
+	div#blog{
+		padding: 50px;
+	}
+
+	div#blog div.thumbnail, div#blog div.description{
+		width: 100%;
+	}
+
+	div#blog div.thumbnail img{
+		width: 100%;
+	}
+
+	div#blog div.description{
+		padding: 1rem;
+		height: auto;
+		margin-bottom: 32px;
+		box-shadow: 0px 0px 5px -2px;
+	}
+
+	div#blog div.description div.titleWrap p{
+		font-size: 1rem;
+	}
+
+	div#contact div#contactus, div#contact div#careers{
+		width: 100%;	
+		float: none;
+		padding: 50px 50px 75px;
+	}
+
+	div#contact div.contactGrid{
+		width: 100%;
+		height: 100%;
+	}
+
+	div#contact span{
+		display: none;
+	}
+
+	div#contact p#contactBody{
+		margin: 1rem 0 2rem;
+	}
+
+	div#contact div#careers div.separatorWrapper{
+		margin: 1rem 0 0;
+	}
+
+	div#contact p#careersBody{
+		margin: 1rem 0;
+	}
+
+	div#footerWrapper{
+		padding: 2rem 50px;
+	}
+
+	div#footerWrapper{
+		display: block;
+	}
+
+	div#footerWrapper p{
+		font-weight: 400;
+		margin-bottom: 0.75rem;
+	}
+
+	div#footerWrapper img{
+		margin-left: 0;
+		margin-right: 12px;
+	}
+
 }
