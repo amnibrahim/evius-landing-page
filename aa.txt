@@ -1,7 +1,0 @@
-modern technology - digedein
-desc service text - max width instead of padding (kecil)
-ganti logo - yg di figma raw
-
-kontak halaman baru
-
-2 button ngelink ke halaman baru isinya form

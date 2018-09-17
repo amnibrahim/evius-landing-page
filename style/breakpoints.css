@@ -172,7 +172,7 @@
 	}
 
 	div#service{
-		padding: 50px;
+		padding: 50px 30px;
 	}
 
 	div#service div#serviceGrid{
@@ -260,7 +260,7 @@
 	}
 
 	div#blog{
-		padding: 50px;
+		padding: 50px 30px;
 	}
 
 	div#blog div.thumbnail, div#blog div.description{
