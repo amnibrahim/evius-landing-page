@@ -1,5 +1,38 @@
 /* large desktops and up ----------- */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1366px) {
+
+	div#heroTitle{
+		max-width: 992px;
+		bottom: calc(100vh / 3);
+	}
+
+	div#service{
+		justify-content: center;
+	}
+
+	div#serviceGrid{
+		width: auto;
+	}
+
+	div#solution{
+		justify-content: center;
+	}
+
+	div#solution div#solutionGrid{
+		max-width: 992px;
+	}
+
+	div#workTitle{
+		width: auto;
+	}
+
+	div#blog{
+		justify-content: center;
+	}
+
+	div#blog div#postWrapper{
+		max-width: 992px;
+	}
 
 }
 
@@ -16,7 +49,7 @@
 	}
 
 	div#service{
-		padding: 75px 150px 75px;
+		padding: 0px 150px 75px;
 	}
 
 	div#serviceGrid{
@@ -36,10 +69,6 @@
 		padding: 150px 150px 75px
 	}
 
-	div#footerWrapper{
-		padding: 50px 150px;
-	}
-
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -55,7 +84,7 @@
 
 	div#heroTitle{
 		width: calc(100% - 200px);
-		bottom: calc(100vh /10);
+		bottom: calc(100vh / 10);
 	}
 
 	div#heroTitle p#heroTitleText{
@@ -116,10 +145,6 @@
 		margin: 1.5rem 0;
 	}
 
-	div#footerWrapper{
-	    padding: 50px 100px
-	}
-
 }
 
 /* Extra small devices (phones, up to 480px) */
@@ -141,9 +166,70 @@
 		margin-bottom: 50px;
 	}
 
-	div#hero div#nav{
+
+
+
+	div#nav{
+		position: fixed;
+		left: calc(-1 * calc(100% - 56px));
+		width: calc(100% - 56px);
+		height: 100vh;
+		transform: translateX(0);
+		margin: 0;
+		z-index: 999;
+		background: rgba(10,23,67,0.9);
+		transition: 0.5s;	
+		padding: 0;
+	}  
+
+	div#nav div.menu{
+		width: 100%;
+		display: block;
+		margin: 4rem 0.5rem;
+	}
+
+	div#nav div.menu.menuLogo:first-child{
 		display: none;
 	}
+
+	div#nav img.menuIcon{
+		display: inline;
+		width: 12px;
+		height: 12px;
+		margin-right: 1.5rem;
+	}
+
+	div#nav a{
+		margin-bottom: 3rem;
+		display: block;
+		color: white;
+		font-weight: 400;
+		letter-spacing: 1px;
+	}
+
+	div#menuHamburger{
+		position: fixed;
+	    right: 16px;
+	    top: 18px;
+	    width: 24px;
+	    height: 24px;
+	    display: flex;
+	    justify-content: space-around;
+	    flex-direction: column;
+	    transition: 0.5s;
+	    z-index: 9999999;
+	}
+
+	div#menuHamburger div{
+		width: 100%;
+		height: 5px;
+	}
+
+
+
+
+
+
 	
 	div#hero div#heroTitle{
 		width: calc(100% - 75px);
@@ -309,7 +395,7 @@
 		margin: 1rem 0;
 	}
 
-	div#footerWrapper{
+	div#footer{
 		padding: 2rem 50px;
 	}
 
@@ -323,6 +409,7 @@
 	}
 
 	div#footerWrapper img{
+		height: 16px;
 		margin-left: 0;
 		margin-right: 12px;
 	}

@@ -43,6 +43,25 @@ for (x=0; x < elements.length; x++) {
 	})
 }
 
+var menu = 'hidden';
+
+document.getElementById('menuHamburger').addEventListener('click', function() {
+	if (menu === 'hidden') {
+		document.getElementById('nav').style.left = '0';
+		document.getElementById('contentWrapper').style.filter = 'blur(10px)';
+		document.getElementById('contentWrapper').style.pointerEvents = 'none';
+		menu = 'shown';
+		console.log(menu)
+	}
+	else{
+		document.getElementById('nav').style.left = 'calc(-1 * calc(100% - 56px))';
+		document.getElementById('contentWrapper').style.filter = 'blur(0px)';
+		document.getElementById('contentWrapper').style.pointerEvents = 'auto';
+		menu = 'hidden';
+		console.log(menu)
+	}
+})
+
 // var thumbnails = document.querySelectorAll('.thumbnail');
 // for (x=0; x < elements.length; x++) {
 // 	thumbnails[x].style.backgroundImage = 'url("img/t.png")';

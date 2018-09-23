@@ -1,16 +1,23 @@
-div#hero{
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	position: relative;
+div#contentWrapper{
+	transition: 0.1s;
 }
 
 div#nav{
-	width: calc(100% - 100px);
+	position: absolute;
+	padding: 0 100px;
+	width: 100%;
+	max-width: 1366px;
 	height: 36px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-between;	
 	margin-top: 20px;
+	z-index: 999;
+	transform: translateX(-50%);
+    left: 50%;
+}
+
+div.menuHamburger, div#hero div#nav img.menuIcon,{
+	display: none;
 }
 
 div.menu img{
@@ -18,11 +25,29 @@ div.menu img{
 	height: 24px;
 }
 
-div.menu:nth-child(even){
-	width: 50%;
+div.menu img.menuIcon{
+	display: none;
+}
+
+div.menu a{
+	margin-left: 2rem;
+}
+
+div.menu{
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+}
+
+div.menu:first-child{
+	width: 50%;
+	justify-content: space-between;
+}
+
+div#hero{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	position: relative;
 }
 
 div#heroTitle{
@@ -231,14 +256,6 @@ div#blog{
 	flex-wrap: wrap;
 }
 
-div#blog p{
-	text-align: left;
-}
-
-div#blog div.separatorWrapper{
-	justify-content: flex-start;
-}
-
 div#postWrapper{
 	width: 100%;
 }
@@ -277,6 +294,10 @@ div.titleWrap{
 
 div.description p:first-child{
 	margin-bottom: 1rem;
+}
+
+div.description p{
+	text-align: left;
 }
 
 /*-----------------------*/
@@ -327,10 +348,14 @@ div#careers div.separatorWrapper{
 /*-----------------------*/
 
 div#footer{
+	display: flex;
+	justify-content: center;
+	padding: 50px 200px;
 }
 
 div#footerWrapper{
-	padding: 50px 200px;
+	width: 100%;
+	max-width: 992px;
 	display: flex;
 	justify-content: space-between;
 }
