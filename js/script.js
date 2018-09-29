@@ -62,9 +62,14 @@ document.getElementById('menuHamburger').addEventListener('click', function() {
 	}
 })
 
-// var thumbnails = document.querySelectorAll('.thumbnail');
-// for (x=0; x < elements.length; x++) {
-// 	thumbnails[x].style.backgroundImage = 'url("img/t.png")';
-// 	thumbnails[x].style.backgroundSize = 'cover';
-// 	console.log(thumbnails[x])
-// }
+document.querySelectorAll('a[type^="scroll"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        console.log('scroll')
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
