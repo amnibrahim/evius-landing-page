@@ -139,6 +139,7 @@ a{
 }
 
 .button{
+  cursor: pointer;  
   text-decoration: none;
   padding: 0.75rem 1.25rem;
   letter-spacing: 1.5px; 
