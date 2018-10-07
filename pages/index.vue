@@ -141,7 +141,7 @@
         <div class="separator bgcyan"></div>
       </div>
       <div id="postWrapper">
-        <a href=#>
+        <a href="blog">
           <div class="post">
             <div class="thumbnail">
               <img src="~/assets/img/t.png">
@@ -154,7 +154,7 @@
             </div>
           </div>
         </a>
-        <a href=#>
+        <a href="blog">
           <div class="post">
             <div class="thumbnail">
               <img src="~/assets/img/u.jpg">
@@ -167,7 +167,7 @@
             </div>
           </div>
         </a>
-        <a href=#>
+        <a href="blog">
           <div class="post">
             <div class="thumbnail">
               <img src="~/assets/img/v.jpg">

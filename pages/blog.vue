@@ -1,11 +1,19 @@
 <template>
   <section class="container">
     <div id="wrap">
+      <div id="backButton" class="darkBlue bgcyan">
+        <a href="/"><span>&#x2190;</span>HOME</a>
+      </div>
       <div id="leftPane" class="bgdarkBlue">
         <div id="stickyPane">
           <p id="title">Lorem ipsum dolor amet seitan beard</p>
           <p class="meta">evius</p>
-          <p class="meta">01-10-2018</p>
+          <p class="meta" id="dates">01-10-2018</p>
+          <div id="socialIcon">
+            <a href="#"><img src="~/assets/img/fb2_w.png"></a>
+            <a href="#"><img src="~/assets/img/tw_w.png"></a>
+            <a href="#"><img src="~/assets/img/ig_w.png"></a>
+          </div>
         </div>
       </div>
       <div id="rightPane" class="bgwhite">
@@ -90,6 +98,33 @@ div#leftPane{
   align-items: center;
 }
 
+div#backButton{
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  border: 1px solid #A3F3FD;
+  z-index: 999;
+}
+
+div#backButton a{
+  display: inline-block;
+  padding: 5px 5px 5px 0px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #0A1743;
+}
+
+div#backButton a:focus{
+  color: #0A1743;
+}
+
+div#backButton span{
+  padding: 5px 7px;
+  margin-right: 5px;
+  color: white;
+  background: #0A1743;
+}
+
 div#stickyPane{
   padding: 50px;
 }
@@ -97,9 +132,9 @@ div#stickyPane{
 div#stickyPane p#title{
   text-align: left;
   font-size: 2.25rem;
-  background: #A3F3FD;
   display:inline;
   line-height: 3rem;
+  color: white;
 }
 
 div#stickyPane p.meta{
@@ -108,8 +143,18 @@ div#stickyPane p.meta{
   letter-spacing: 1px;  
 }
 
-div#stickyPane p:last-child{
+div#stickyPane p#dates{
   margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+div#socialIcon{
+  margin-left: -1rem;
+}
+
+div#socialIcon img{
+  height: 24px;
+  margin-left: 12px;
 }
 
 div#rightPane{
@@ -150,6 +195,11 @@ div#mainText p:first-child{
 }
 
 @media screen and (max-width: 767px) {
+  div#backButton{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
   div#leftPane{
     display: none;
   }
@@ -157,7 +207,7 @@ div#mainText p:first-child{
     width: 100%;
     position: relative;
     left: 0;
-    padding: 50px 30px;
+    padding: 100px 30px 50px;
   }
   div#mainText p, div#mainText ul, div#mainText ol, div#mainText li{
     font-size: 1rem;
