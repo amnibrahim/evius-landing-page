@@ -77,6 +77,16 @@ export default{
       console.log(data)
     });
 
+    window.addEventListener("resize", function() {
+
+      console.log('resize!');
+
+      if (window.innerWidth > 767) {
+        document.getElementById('nav').style.left = '50%';
+      }
+
+    });
+
   }
 }
 

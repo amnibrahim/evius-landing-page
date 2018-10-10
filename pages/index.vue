@@ -125,11 +125,6 @@
         <div id="slider">
           <img name="slider">
         </div>
-        <div id="pointer">
-          <div id="dot0" index="0"></div>
-          <div id="dot1" index="1"></div>
-          <div id="dot2" index="2"></div>
-        </div>
       </div>
     </div>
 
@@ -230,70 +225,60 @@ export default {
     var time = 2500;
     var timeout;
 
-    images[0] = '~/assets/img/uu1.png';
-    images[1] = '~/assets/img/uu2.png';
-    images[2] = '~/assets/img/uu3.png';
+    images[0] = '/uu1.png';
+    images[1] = '/uu2.png';
+    images[2] = '/uu3.png';
 
-    function changeImg() {
-      var dot = document.getElementById('dot'+i)
-      dot.style.backgroundColor  = '#2A459B';
-      document.slider.src = images[i];
+    document.slider.src = images[i];
 
-      for (var j=0; j < images.length; j++) {
-        if (j !== i) {
-          var dotx = document.getElementById('dot'+j)
-          dotx.style.backgroundColor  = '#C4C4C4';
-        }
-      }
+    setInterval(function(){
 
-      if ( i < images.length - 1) {
+      if (i < images.length - 1) {
         i++;
-      } else {
+        document.slider.src = images[i];
+      }
+      else {
         i = 0;
+        document.slider.src = images[i];
       }
 
-      timeout = setTimeout("changeImg()", time);
-    }
-
-    window.onload = changeImg;
-
-    var elements = document.querySelectorAll('#dot0,#dot1,#dot2');
-    for (var x=0; x < elements.length; x++) {
-      elements[x].addEventListener('click', function() {
-        var newIndex = this.getAttribute('index');
-        i = newIndex;
-        
-        // this.style.backgroundColor = '#2A459B';
-
-        clearTimeout(timeout);
-        changeImg();
-      })
-    }
+    },2500);
 
     var menu = 'hidden';
 
     document.getElementById('menuHamburger').addEventListener('click', function() {
-      if (menu === 'hidden') {
-        document.getElementById('nav').style.left = '0';
-        document.getElementById('contentWrapper').style.filter = 'blur(10px)';
-        document.getElementById('contentWrapper').style.pointerEvents = 'none';
-        menu = 'shown';
-        console.log(menu)
-      }
-      else{
+      if (menu === 'shown') {
+        
         document.getElementById('nav').style.left = 'calc(-1 * calc(100% - 56px))';
         document.getElementById('contentWrapper').style.filter = 'blur(0px)';
         document.getElementById('contentWrapper').style.pointerEvents = 'auto';
         menu = 'hidden';
         console.log(menu)
       }
+      else{
+        document.getElementById('nav').style.left = '0';
+        document.getElementById('contentWrapper').style.filter = 'blur(10px)';
+        document.getElementById('contentWrapper').style.pointerEvents = 'none';
+        menu = 'shown';
+        console.log(menu)
+      }
+    });
+
+    window.addEventListener("resize", function() {
+
+      console.log('resized');
+
+      if (window.innerWidth > 767) {
+        document.getElementById('nav').style.left = '50%';
+      }
+
     });
 
     document.querySelectorAll('a[type^="scroll"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
-            console.log('scroll')
+            console.log('scrolled')
 
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
@@ -321,7 +306,7 @@ div#nav{
   margin-top: 20px;
   z-index: 999;
   transform: translateX(-50%);
-    left: 50%;
+  left: 50%;
 }
 
 div.menuHamburger, div#hero div#nav img.menuIcon,{

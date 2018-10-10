@@ -1,0 +1,3 @@
+view all dari dummy json
+nav responsive hilang
+event binding js
