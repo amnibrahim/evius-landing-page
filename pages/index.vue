@@ -136,45 +136,23 @@
         <div class="separator bgcyan"></div>
       </div>
       <div id="postWrapper">
-        <a href="blog">
+
+        <nuxt-link
+          v-for="(item,index) in data"
+          :key="index"
+          :to="`/blog/${item._id}`"
+        >
           <div class="post">
-            <div class="thumbnail">
-              <img src="~/assets/img/t.png">
-            </div>
+            <div class="thumbnail" id="thumbnail"></div>
             <div class="description">
               <div class="titleWrap">
-                <p class="darkBlue h3 title">Top 6 Software Development Methodologies</p>
-                <p class="darkBlue date">May 16, 2018</p>
-              </div>
+                <p class="darkBlue h3 title">{{ item.Title }}</p>
+                <p class="darkBlue date">{{ item.createdAt }}</p>
+            </div>
             </div>
           </div>
-        </a>
-        <a href="blog">
-          <div class="post">
-            <div class="thumbnail">
-              <img src="~/assets/img/u.jpg">
-            </div>
-            <div class="description">
-              <div class="titleWrap">
-                <p class="darkBlue h3 title">Git and Interactive Patch Add</p>
-                <p class="darkBlue date">May 16, 2018</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="blog">
-          <div class="post">
-            <div class="thumbnail">
-              <img src="~/assets/img/v.jpg">
-            </div>
-            <div class="description">
-              <div class="titleWrap">
-                <p class="darkBlue h3 title">A beginner's Introduction to Working with Redux in React</p>
-                <p class="darkBlue date">May 16, 2018</p>
-              </div>
-            </div>
-          </div>
-        </a>
+        </nuxt-link>
+
         <div class="post" id="viewWrapper">
           <div id="viewButton">
             <button class="button">VIEW ALL</button>
@@ -192,7 +170,7 @@
         </div>
       </div>
       <div id="careers">
-        <div class="contactGrid">
+        <div class="contactGriv-on:click="greet"d">
           <p class="white h2 fw-6" id="careersTitle">Careers</p>
           <p class="white" id="careersBody">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <p class="white fw-6" id="careersEmail">Send your email to &nbsp;&nbsp;&nbsp; mamamia@evius.com</p>
@@ -281,10 +259,56 @@ export default {
             console.log('scrolled')
 
             document.querySelector(this.getAttribute('href')).scrollIntoView({
+                block: "start", 
+                inline: "nearest",
                 behavior: 'smooth'
             });
         });
     });
+  },
+
+  data() {
+    return {
+      data: ''
+    }
+  },
+  methods: {
+
+  },
+  created() {
+    function loadJSON(callback) {   
+
+      var xobj = new XMLHttpRequest();
+      xobj.overrideMimeType("application/json");
+      xobj.open('GET', 'blog.json', true); 
+      xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+          try {
+            var data = JSON.parse(xobj.responseText);
+          } catch(err) {
+            console.log('error')
+            return;
+          }
+          callback(data);
+        }
+      };
+      xobj.send(null);  
+    }
+    var self = this;
+    loadJSON(function(data) {
+      var slicedjson = data.data.slice(0,3)
+      self.data = slicedjson
+      // console.log(self.data);
+    });
+
+    window.addEventListener("resize", function() {
+      console.log('resize!');
+      if (window.innerWidth > 767) {
+        document.getElementById('nav').style.left = '50%';
+      }
+
+    });
+
   }
 }
 </script>
@@ -384,6 +408,10 @@ div#heroArrow{
   bottom: -200px;
 }
 
+div#heroArrow a{
+  color: #0A1743;
+}
+
 /*-----------------------*/
 
 div#service{
@@ -461,6 +489,7 @@ div.gridSolCell{
 
 div.gridSolCell img{
   width: 100%;
+  box-shadow: 0px 4px 15px -6px;
 }
 
 div#demo{
@@ -681,7 +710,7 @@ div#socialIcon img{
 
   div#heroTitle{
     max-width: 992px;
-    bottom: calc(100vh / 3);
+    bottom: calc(100vh / 3.5);
   }
 
   div#service{

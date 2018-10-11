@@ -208,4 +208,27 @@ a{
   background: #A3F3FD;
 }
 
+/*-------------------------*/
+/*blog*/
+
+div#mainText p, div#mainText p#content p, div#mainText ul, div#mainText ol, div#mainText li{
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+}
+
+div#mainText li{
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 767px) {
+  div#mainText p, div#mainText ul, div#mainText ol, div#mainText li{
+    font-size: 1rem;
+  }
+  div#mainText li{
+    margin-left: 1rem;
+  }
+}
+
 </style>
