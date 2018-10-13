@@ -143,7 +143,12 @@
           :to="`/blog/${item._id}`"
         >
           <div class="post">
-            <div class="thumbnail" id="thumbnail"></div>
+            <div 
+              class="thumbnail" 
+              :style="`background-image: url('${item.Thumbnail}')`"
+            >
+              
+            </div>
             <div class="description">
               <div class="titleWrap">
                 <p class="darkBlue h3 title">{{ item.Title }}</p>
@@ -170,7 +175,7 @@
         </div>
       </div>
       <div id="careers">
-        <div class="contactGriv-on:click="greet"d">
+        <div class="contactGrid">
           <p class="white h2 fw-6" id="careersTitle">Careers</p>
           <p class="white" id="careersBody">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <p class="white fw-6" id="careersEmail">Send your email to &nbsp;&nbsp;&nbsp; mamamia@evius.com</p>
@@ -593,11 +598,7 @@ div.thumbnail{
   height: 100%;
   float: left;
   overflow: hidden;
-}
-
-div.thumbnail img{
-  /*width: 100%;*/
-  height: 100%;
+  background-size: cover;
 }
 
 div.description{
@@ -913,15 +914,15 @@ div#socialIcon img{
 
   div#menuHamburger{
     position: fixed;
-      right: 16px;
-      top: 18px;
-      width: 24px;
-      height: 24px;
-      display: flex;
-      justify-content: space-around;
-      flex-direction: column;
-      transition: 0.5s;
-      z-index: 9999999;
+    right: 16px;
+    top: 18px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    transition: 0.5s;
+    z-index: 9999999;
   }
 
   div#menuHamburger div{
@@ -1048,10 +1049,6 @@ div#socialIcon img{
   }
 
   div#blog div.thumbnail, div#blog div.description{
-    width: 100%;
-  }
-
-  div#blog div.thumbnail img{
     width: 100%;
   }
 
