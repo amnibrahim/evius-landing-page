@@ -41,10 +41,10 @@
 
       <div id="heroTitle">
         <span class="cyan fw-7" id="heroAphos"><i>''</i></span>
-        <p class="h1 fw-7" id="heroTitleText">We bring<br>emotion to your product</p>
-        <p class="fw-5" id="heroBodyText">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <p class="h1 fw-7" id="heroTitleText">We help<br>revolutionaze business</p>
+        <p class="fw-5" id="heroBodyText">The 4th industrial revolution is coming. It’s time to digitize your business to stay relevant and stay at the forefront of your industry.</p>
         <a class="button bgdarkBlue white fw-6" target="_blank" href="contact">CONTACT US</a>
-        <p id="heroCornerText"><span class="bgcyan">Lorem ipsum<br>dolor sit amet consectetur</span></p>
+        <p id="heroCornerText"><span class="bgcyan">There is not limit<br>We push the boundaries</span></p>
         <div id="heroArrow">
           <a href="#service" type="scroll">
           <span>&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9654;</span>
@@ -62,18 +62,15 @@
       </div>
       <div id="serviceGrid">
         <div class="gridCell">
-          <p><span class="h3">Modern <br>technology</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+          <p><span class="h3">Modern <br>technology</span>Using modern technology, we deliver better and faster system compare to the traditional one. We help our customers improve productivity, reduce operating costs and stay ahead of the competition.</p>
           <object type="image/svg+xml" data="svg/undraw_real-time_sync_o57k.svg" id="grid1"></object>
         </div>
         <div class="gridCell">
           <object type="image/svg+xml" data="svg/undraw_Devices_e67q.svg" id="grid1"></object>
-          <p><span class="h3">Data <br>driven UI/UX</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+          <p><span class="h3">Data <br>driven UI/UX</span>Responsive and pretty UI is a must, but we also analyze the design to find out which one work best based on your customers behaviour by leveraging A/B testing method and other analytical tools.</p>
         </div>
         <div class="gridCell">
-          <p><span class="h3">Flexible <br>and scalable</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitatio.</p>
+          <p><span class="h3">Flexible <br>and scalable</span>We architect your system to be scalable by making use of the microservice architecture. Achieve flexibility of serving any device from anywhere in the world with REST-API based technology.</p>
           <object type="image/svg+xml" data="svg/undraw_tabs_jf82.svg" id="grid1"></object>
         </div>
       </div>
@@ -160,7 +157,7 @@
 
         <div class="post" id="viewWrapper">
           <div id="viewButton">
-            <button class="button">VIEW ALL</button>
+            <nuxt-link class="button bggrey" :to="`/blog`">VIEW ALL</nuxt-link>
           </div>
         </div>
       </div>
@@ -520,13 +517,15 @@ div#work{
   padding: 0px 200px 0px;
   height: 100vh;
   display: grid;
-  grid: auto-flow dense / repeat(2, 50%);
-  place-items: center;
-  /*margin-bottom: 50px;*/
+  /*grid: auto-flow dense / repeat(2, 50%);
+  place-items: center;*/
 }
 
 div#workTitle{
   width: 100%;
+  grid-column: 1;
+  display: flex;
+  align-items: center;
 }
 
 div#workTitle div.title{
@@ -547,6 +546,12 @@ div#workTitle span{
   display: block;
   margin-bottom: 2rem;
   letter-spacing: 5px;
+}
+
+div#sliderWrapper{
+  grid-column: 2;
+  display: flex;
+  align-items: center;
 }
 
 div#slider{
@@ -632,6 +637,11 @@ div#viewWrapper{
 
 div#viewButton{
   width: auto;
+  margin-top: 0.75rem;
+}
+
+div#viewButton button a{
+  padding: 0.75rem 1.25rem;
 }
 
 div#viewButton button:focus{
@@ -1019,8 +1029,9 @@ div#socialIcon img{
   }
 
   div#work div#workTitle div.separatorWrapper{
-    justify-content: center;
-    margin-bottom: 50px;
+  /*  justify-content: center;
+    margin-bottom: 50px;*/
+    display: none;
   }
 
   div#work p{
@@ -1059,8 +1070,16 @@ div#socialIcon img{
     box-shadow: 0px 0px 5px -2px;
   }
 
+  div#blog div#viewWrapper{
+    display: block;
+    height: 0;
+  }
+
   div#blog div.description div.titleWrap p{
     font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   div#contact div#contactus, div#contact div#careers{

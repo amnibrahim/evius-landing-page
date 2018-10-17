@@ -259,6 +259,9 @@ div.highLightWrap a div#descHighLight p{
 	text-align: left;
 	border: 1px solid yellow;
 	color: white;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 div.highLightWrap a.grid1 div#descHighLight p:first-child{
